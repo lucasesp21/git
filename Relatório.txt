@@ -1,0 +1,138 @@
+﻿Parte 1: Seguidor de tensão
+
+
+Objetivo específico: Verificar o funcionamento de um circuito seguidor de tensão.
+
+
+Experimento: Utilizando um Amp.OP. Lm324N e um TL082 monte dois circuitos na configuração de seguidor de tensão (Buffer), com uma resistência de realimentação de 10 kΩ em cada um dos circuitos. Utilize a alimentação simétrica de +/-12V. (limite a corrente em 0,05A).
+
+
+Procedimentos: 
+1 - Simular o circuito utilizando como tensão de entrada um sinal senoidal com 0,5 Vp e 1kHz.
+2 - Discutir os resultados.
+
+
+> LM324N
+Características principais:
+* O encapsulamento do CI possui 4 amp op independentes;
+* Possui alto ganho e compensação de frequência;
+* Indicado para operar com fonte simples em uma ampla faixa de tensões;
+* Amplificados muito usado para transdutores e amplificadores DC.
+Simulação do circuito LM324 no LTspice, utilizando o modelo da Texas Instruments:
+  
+
+
+
+Tensão de entrada e tensão de saída do circuito: 
+  
+
+Comentários:
+O resistor de 10k na realimentação do amp op não influencia na tensão de saída pois não há diferença de potencial, logo temos um seguidor de tensão.
+> TL082
+Circuito montado no LTspice, utilizando o modelo da Texas Instruments:
+  
+
+
+
+
+
+
+
+
+
+
+
+Tensão de entrada e tensão de saída do circuito: 
+  
+
+
+
+Parte 02: Amplificador inversor
+
+
+Objetivo específico: Medir o ganho de um amplificador inversor e verificar o efeito da saturação.
+
+
+Experimento: Utilizando um Amp.OP. Lm324N e o TL082 monte dois amplificadores inversores utilize o resistor de realimentação com valor 20 kΩ e a resistência de entrada de 2kΩ. Utilize a alimentação simétrica de +/-12V. (limite a corrente em 0,05A)
+
+
+Procedimentos:
+1 - Simular o circuito utilizando como tensão de entrada um sinal senoidal com 0,5 Vp e 1kHz.
+2 - Mostrar os resultados da tensão de saída.
+3 - Verificar o valor do ganho obtido.
+4 - Ir aumentando o valor da tensão de entrada e verificar para qual valor da tensão de entrada ocorre a saturação do sinal.
+5 - Verificar qual o valor da queda de tensão com relação à tensão de alimentação.
+6 - Discutir os resultados.
+
+
+> LM324N
+Simulação do circuito LM324 no LTspice, utilizando o modelo da Texas Instruments:
+  
+
+Tensão de entrada e tensão de saída do circuito: 
+  
+
+
+
+
+
+Comentários:
+Foi constatado um ganho de pouco menos do que -20V em decorrência das não idealidades do amp op e também das variações dos resistores. Já a saturação ocorreu em -23V também em decorrência do que foi mencionado anteriormente, em um cenário ideal a saturação aconteceria em -24V.
+> TL082
+Circuito montado no LTspice, utilizando o modelo da Texas Instruments:
+  
+
+Tensão de entrada e tensão de saída do circuito: 
+  
+
+
+
+Parte 03: Amplificador não-inversor
+
+
+
+
+Objetivo específico: Medir o ganho de um amplificador não-inversor.
+
+
+Experimento: Utilizando um Amp.OP. Lm324N e o TL082 monte dois amplificadores não-inversores use o resistor de realimentação com valor 20 kΩ e o outro resistor igual à 2kΩ. Utilize a alimentação simétrica de +/-12V. (limite a corrente em 0,05A)
+
+
+Procedimento:
+1 - Configure no gerador de função um sinal senoidal com 0,5Vp @ 1 kHz e mostre o mesmo no canal 1 do osciloscópio;
+2 - Mostre a saída do amplificador no canal 2 do osciloscópio e chame o professor novamente e mostre os resultados;
+3 - Verifique o valor do ganho obtido;
+6 - Qual o valor da queda de tensão com relação a tensão de alimentação?
+> LM324N
+Simulação do circuito LM324 no LTspice, utilizando o modelo da Texas Instruments:
+  
+
+Tensão de entrada e tensão de saída do circuito: 
+  
+
+
+
+> TL082
+Circuito montado no LTspice, utilizando o modelo da Texas Instruments:
+  
+
+Tensão de entrada e tensão de saída do circuito: 
+  
+
+
+
+Parte 04: Amplificador subtrator
+
+
+Objetivo específico: verificar as não idealidades dos ampops aplicadas em um circuito subtrator.
+
+
+Experimento: Utilizando um Amp.OP. Lm324N e o TL082 monte dois amplificadores subtratores use o resistor de realimentação com valor 510kΩ e ganho igual á 10V/V.
+Utilize a alimentação simétrica de +/-12V. (limite a corrente em 0,05A)
+
+
+Procedimento:
+1 - Compare os resultados para o LM324N e para TL082.
+2 - Caso a fonte V1 tenha o valor igual á 0(zero)V, qual o valor da tensão de saída, para ambos os circuitos? Explique.
+3 - Caso o seja alterado para o circuito abaixo, existe alguma variação na saída? Explique.
+4 - Justifique as dissimilaridades encontradas utilizando os dados do datasheet.
